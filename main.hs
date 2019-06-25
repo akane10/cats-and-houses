@@ -40,11 +40,10 @@ getHumanAgeOfCatFromHouse = humanAge .getCatFromHouse
 findOldestCat :: [House] -> Maybe Cat
 findOldestCat [] = Nothing
 findOldestCat houses = maybeOldestCat
-  where
-    maybeOldestCat =
-      case findOldestCatHouse houses of
-        Just house -> Just (getCatFromHouse house)
-        Nothing -> Nothing
+  where maybeOldestCat =
+         case findOldestCatHouse houses of
+         Just house -> Just (getCatFromHouse house)
+         Nothing -> Nothing
 
 findOldestCatHouse :: [House] -> Maybe House
 findOldestCatHouse houses =
