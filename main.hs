@@ -3,7 +3,7 @@ import qualified Data.List as L
 data Cat = Cat Name CatBreed Age
 type Name = String
 data CatBreed = 
-  Siamese | Persian | Bengal | Sphynx
+    Siamese | Persian | Bengal | Sphynx
   | Burmese | Birman | RussianBlue
   | NorwegianForest | CornishRex | MaineCoon
 type Age = Integer
@@ -35,7 +35,7 @@ getCatFromHouse :: House -> Cat
 getCatFromHouse (House _ c) = c
 
 getHumanAgeOfCatFromHouse :: House -> Age
-getHumanAgeOfCatFromHouse = humanAge .getCatFromHouse
+getHumanAgeOfCatFromHouse = humanAge . getCatFromHouse
 
 findOldestCat :: [House] -> Maybe Cat
 findOldestCat [] = Nothing
